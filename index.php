@@ -12,17 +12,20 @@ if(isset($_POST['btnLogin'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
     
+    
 
     try {
         $signInResult = $auth->signInWithEmailAndPassword($email, $password);
         $token = $signInResult->idToken();
         echo "Clicked";
+        
 
         try {
             $verIdToken = $auth->verifyIdToken($token);
-            // $uid = $verIdToken->claims()->get('sub');
+            
+            $uid = $verIdToken->claims()->get('sub');
 
-            $uid = $signInResult->firebaseUserId();
+            // $uid = $signInResult->firebaseUserId();
 
             $_SESSION['uid'] = $uid;
             $_SESSION['token'] = $token;
@@ -41,22 +44,23 @@ if(isset($_POST['btnLogin'])){
     }
 }
 
-    // $reference = $database->getReference('Test')->getValue();
-    // echo $reference;
+$reference = $database->getReference('Test')->getValue();
+echo $reference;
 
 ?>
 <!DOCTYPE html>
 <html>
     <header>
-
+        <title>PangLocally Login</title>
     </header>
     <body>
+    <form action="index.php" method="POST">
         <form>
             <label for="email">E-mail:</label><br>
             <input type="text" id="email" name="email" placeholder="189casd@gmail.com"><br>
             <label for="password">Password</label><br>
             <input type="password" id="password" name="password"><br>
-            <input type="submit" name="btnLogin" value="login">
+            <input type="submit" name="btnLogin" onclick="console.log('clicked')" value="login">
         </form>
     </body>
 </html>
