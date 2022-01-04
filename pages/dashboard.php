@@ -12,8 +12,11 @@ echo '</pre>';
     <head>
         <title>PangLocally Dashboard</title>
         <!--Example CSS-->
-        <link href="ExampleStyle.css" type="text/css" rel="stylesheet" />
+
         <style>
+            /* *{
+                box-sizing: border-box;
+            } */
             .outerDiv {
                 background-color: white;
                 color: #fff;
@@ -66,11 +69,63 @@ echo '</pre>';
             .right-container2{
                 text-align: left;
                 margin-left: 5%;
+                width: 100%;
+                
             }
             .right-container3{
                 text-align: left;
                 margin-left: 5%;
+                
             }
+            .left-card-container1,.left-card-container2  {
+                box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
+                width:20%;
+                height: 35%;
+                border-radius: 10%;
+                padding: 2%;
+                text-align: center;
+                float: left;
+            }
+            .left-card-container2{
+                margin-left: 1%;
+            }
+            img{
+                border-radius: 5%;
+            }
+            .right-card-container2{
+                box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
+                width:40%;
+                height: 35%;
+                border-radius: 10%;
+                padding: 2%;
+                text-align: center;
+                float: left;
+                margin-left: 1%;
+            }
+            .right-card-container{
+                box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
+                width:40%;
+                height: 35%;
+                border-radius: 10%;
+                padding: 2%;
+                text-align: center;
+                float: left;
+                margin: 2% ;
+            }
+            .right-container3{
+            width: 100%;
+        }
+        .right-card-container-statistic{
+            box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
+                width:85%;
+                height: 15%;
+                border-radius: 10%;
+                padding: 2%;
+                text-align: center;
+                float: left;
+                margin: 2% ;
+        }
+        
         </style>
     </head>
     <body style="text-align: center;">
@@ -92,12 +147,44 @@ echo '</pre>';
                 </div >
                 <div class="right-container2">
                     <h3>Trending Location</h3>
+                    <div class="left-card-container1">
+                        <img src="../placeholder/hundred.jpg" alt="placeholder" style="width: 100%;">
+                        
+                    </div>
+                    <div class="left-card-container2">
+                        <img src="../placeholder/hundred.jpg" alt="placeholder" style="width: 100%;">
+                        
+                    </div>
+                    <div class="right-card-container2">
+
+                    <div class="right-card-container">
+                        <img src="../placeholder/hundred.jpg" alt="placeholder" style="width: 100%;">
+                        
+                    </div>
+                    <div class="right-card-container">
+                        <img src="../placeholder/hundred.jpg" alt="placeholder" style="width: 100%;">
+                        
+                    </div>
+                    <div class="right-card-container">
+                        <img src="../placeholder/hundred.jpg" alt="placeholder" style="width: 100%;">
+                        
+                    </div>
+                    <div class="right-card-container">
+                        <img src="../placeholder/hundred.jpg" alt="placeholder" style="width: 100%;">
+                        
+                    </div>    
+                    </div>
                 </div>
+
                 <div class="right-container3">
                     <h3>Statistics</h3>
+                    <div class="right-card-container-statistic">
+                        <img src="../placeholder/hundred.jpg" alt="placeholder" style="width: 10%;">
+                        
+                    </div> 
                 </div>
             </div>
-            <div style="clear: both;"></div>
+          
         </div>
     </body>
 </html>

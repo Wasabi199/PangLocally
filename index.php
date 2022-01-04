@@ -41,6 +41,7 @@ if(isset($_POST['btnLogin'])){
         }
     } catch (Exception $e) {
         echo '<script>alert("Invalid Email and/or Password!")</script>';
+        
     }
 }
 
